@@ -12,6 +12,8 @@ class BusinessAccount {
       this.balance = this.balance + amount;
     }
   }
+
+  makeWithdrawal(amount) {}
 }
 
 module.exports = BusinessAccount;
