@@ -19,7 +19,10 @@ class BusinessAccount {
     }
   }
 
-  sepaInvoice() {}
+  sepaInvoice(amount) {
+    const amountMinusTransactionCosts = amount * 0.99;
+    this.balance = this.balance + amountMinusTransactionCosts;
+  }
 }
 
 module.exports = BusinessAccount;
