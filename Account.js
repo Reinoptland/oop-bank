@@ -6,7 +6,9 @@ class Account {
     this.creditLimit = creditLimit;
   }
 
-  makeDeposit() {}
+  makeDeposit(amount) {
+    this.balance = this.balance + amount;
+  }
 }
 
 module.exports = Account;
