@@ -54,14 +54,14 @@ test("makeDeposit should ignore negative numbers", () => {
   expect(businessAccountInstance.balance).toBe(1000);
 });
 
-test.only("A Business Account instance should have a 'makeWithdrawal' method", () => {
+test("A Business Account instance should have a 'makeWithdrawal' method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.makeWithdrawal).toBeDefined();
   expect(businessAccountInstance.makeWithdrawal instanceof Function).toBe(true);
 });
 
-test("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
+test.only("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
   const balance = 50000;
   const creditLimit = 500;
   const businessAccountInstance = new BusinessAccount(

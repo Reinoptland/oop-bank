@@ -13,7 +13,9 @@ class BusinessAccount {
     }
   }
 
-  makeWithdrawal(amount) {}
+  makeWithdrawal(amount) {
+    this.balance = this.balance - amount;
+  }
 }
 
 module.exports = BusinessAccount;
