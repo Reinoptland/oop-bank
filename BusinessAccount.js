@@ -8,7 +8,9 @@ class BusinessAccount {
   }
 
   makeDeposit(amount) {
-    this.balance = this.balance + amount;
+    if (amount > 0) {
+      this.balance = this.balance + amount;
+    }
   }
 }
 
