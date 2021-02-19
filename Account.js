@@ -4,6 +4,7 @@ class Account {
     this.name = name;
     this.balance = balance;
     this.creditLimit = creditLimit;
+    this.dailyLimit = 5000;
   }
 
   makeDeposit(amount) {
@@ -13,7 +14,7 @@ class Account {
   }
 
   makeWithdrawal(amount) {
-    if (amount < this.balance + this.creditLimit && amount < 5000) {
+    if (amount < this.balance + this.creditLimit && amount < this.dailyLimit) {
       this.balance = this.balance - amount;
     }
   }

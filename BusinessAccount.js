@@ -3,13 +3,9 @@ const Account = require("./Account");
 class BusinessAccount extends Account {
   constructor(name, balance, creditLimit, sepaPermission) {
     super(name, balance, creditLimit);
+    // check Account.js to see how dailyLimit is used in makeWithdrawal
+    this.dailyLimit = 20000;
     this.sepaPermission = sepaPermission;
-  }
-
-  makeWithdrawal(amount) {
-    if (amount < this.balance + this.creditLimit && amount < 20000) {
-      this.balance = this.balance - amount;
-    }
   }
 
   sepaInvoice(amount) {
