@@ -12,7 +12,9 @@ class Account {
     }
   }
 
-  makeWithdrawal() {}
+  makeWithdrawal(amount) {
+    this.balance = this.balance - amount;
+  }
 }
 
 module.exports = Account;
