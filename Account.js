@@ -1,2 +1,4 @@
 // Export your class here as module.exports = MyClass
-module.exports = "Bla";
+class Account {}
+
+module.exports = Account;
