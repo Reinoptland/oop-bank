@@ -20,7 +20,7 @@ class BusinessAccount {
   }
 
   sepaInvoice(amount) {
-    if (amount > 0) {
+    if (amount > 0 && this.sepaPermission === true) {
       const amountMinusTransactionCosts = amount * 0.99;
       this.balance = this.balance + amountMinusTransactionCosts;
     }

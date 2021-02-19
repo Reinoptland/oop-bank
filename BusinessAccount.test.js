@@ -144,7 +144,7 @@ test("Amounts passed to sepaInvoice should be ignored if the business does not h
   expect(businessAccountInstance.balance).toBe(1000);
 });
 
-test.only("Negative amounts passed to sepaInvoice should be ignored", () => {
+test("Negative amounts passed to sepaInvoice should be ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const sepaPermission = true;
