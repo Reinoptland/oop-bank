@@ -6,13 +6,13 @@ test("Account.js should export something", () => {
   expect(Account).not.toBeNull();
 });
 
-test.only("Account should be a constructor, (you can use it with the new keyword)", () => {
+test("Account should be a constructor, (you can use it with the new keyword)", () => {
   const accountInstance = new Account();
 
   expect(accountInstance instanceof Account).toBe(true);
 });
 
-test("A new Account can be created with and should store: a name, balance & creditLimit", () => {
+test.only("A new Account can be created with and should store: a name, balance & creditLimit", () => {
   const name = "Rein";
   const balance = 1000;
   const creditLimit = 500;
