@@ -6,13 +6,13 @@ test("BusinessAccount.js should export something", () => {
   expect(BusinessAccount).not.toBeNull();
 });
 
-test.only("BusinessAccount should be a constructor, (you can use it with the new keyword)", () => {
+test("BusinessAccount should be a constructor, (you can use it with the new keyword)", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance instanceof BusinessAccount).toBe(true);
 });
 
-test("A new Business Account can be created with and should store: a name, balance, creditLimit, sepaPermission", () => {
+test.only("A new Business Account can be created with and should store: a name, balance, creditLimit, sepaPermission", () => {
   const name = "ACME.CO";
   const balance = 1000;
   const creditLimit = 500;
