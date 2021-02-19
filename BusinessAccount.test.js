@@ -111,7 +111,7 @@ test("A BusinessAccount have the sepaInvoice method", () => {
   expect(businessAccountInstance.sepaInvoice instanceof Function).toBe(true);
 });
 
-test.only("Amount passed to sepaInvoice should be added to balance minus 1% transaction cost", () => {
+test("Amount passed to sepaInvoice should be added to balance minus 1% transaction cost", () => {
   const balance = 1000;
   const creditLimit = 500;
   const sepaPermission = true;
@@ -144,7 +144,7 @@ test("Amounts passed to sepaInvoice should be ignored if the business does not h
   expect(businessAccountInstance.balance).toBe(1000);
 });
 
-test("Negative amounts passed to sepaInvoice should be ignored", () => {
+test.only("Negative amounts passed to sepaInvoice should be ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const sepaPermission = true;

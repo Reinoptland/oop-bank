@@ -20,8 +20,10 @@ class BusinessAccount {
   }
 
   sepaInvoice(amount) {
-    const amountMinusTransactionCosts = amount * 0.99;
-    this.balance = this.balance + amountMinusTransactionCosts;
+    if (amount > 0) {
+      const amountMinusTransactionCosts = amount * 0.99;
+      this.balance = this.balance + amountMinusTransactionCosts;
+    }
   }
 }
 
