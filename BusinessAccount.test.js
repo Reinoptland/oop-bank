@@ -6,7 +6,7 @@ test("BusinessAccount.js should export something", () => {
   expect(BusinessAccount).not.toBeNull();
 });
 
-test("BusinessAccount should be a constructor, (you can use it with the new keyword)", () => {
+test.only("BusinessAccount should be a constructor, (you can use it with the new keyword)", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance instanceof BusinessAccount).toBe(true);
