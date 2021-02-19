@@ -2,10 +2,7 @@ const Account = require("./Account");
 
 class BusinessAccount extends Account {
   constructor(name, balance, creditLimit, sepaPermission) {
-    super();
-    this.name = name;
-    this.balance = balance;
-    this.creditLimit = creditLimit;
+    super(name, balance, creditLimit);
     this.sepaPermission = sepaPermission;
   }
 
