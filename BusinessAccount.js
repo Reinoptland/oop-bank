@@ -6,6 +6,8 @@ class BusinessAccount {
     this.creditLimit = creditLimit;
     this.sepaPermission = sepaPermission;
   }
+
+  makeDeposit() {}
 }
 
 module.exports = BusinessAccount;

@@ -12,7 +12,7 @@ test("BusinessAccount should be a constructor, (you can use it with the new keyw
   expect(businessAccountInstance instanceof BusinessAccount).toBe(true);
 });
 
-test.only("A new Business Account can be created with and should store: a name, balance, creditLimit, sepaPermission", () => {
+test("A new Business Account can be created with and should store: a name, balance, creditLimit, sepaPermission", () => {
   const name = "ACME.CO";
   const balance = 1000;
   const creditLimit = 500;
@@ -31,7 +31,7 @@ test.only("A new Business Account can be created with and should store: a name, 
   expect(businessAccountInstance.sepaPermission).toBe(true);
 });
 
-test("A Business Account instance should have a 'makeDeposit' method", () => {
+test.only("A Business Account instance should have a 'makeDeposit' method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.makeDeposit).toBeDefined();
