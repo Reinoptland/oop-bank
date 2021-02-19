@@ -75,7 +75,7 @@ test("A number passed to makeWithdrawal should be subtracted from the balance of
   expect(businessAccountInstance.balance).toBe(44000);
 });
 
-test.only("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
+test("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const businessAccountInstance = new BusinessAccount(
@@ -90,7 +90,7 @@ test.only("A number passed to makeWithdrawal which is greater than the balance +
   expect(businessAccountInstance.balance).toBe(1000);
 });
 
-test("The daily limit for a withdrawal should be 20000, amounts over 20000 should be ignored", () => {
+test.only("The daily limit for a withdrawal should be 20000, amounts over 20000 should be ignored", () => {
   const balance = 50000;
   const creditLimit = 500;
   const businessAccountInstance = new BusinessAccount(

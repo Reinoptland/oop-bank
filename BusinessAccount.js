@@ -14,7 +14,7 @@ class BusinessAccount {
   }
 
   makeWithdrawal(amount) {
-    if (amount < this.balance + this.creditLimit) {
+    if (amount < this.balance + this.creditLimit && amount < 20000) {
       this.balance = this.balance - amount;
     }
   }
