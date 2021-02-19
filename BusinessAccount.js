@@ -6,12 +6,6 @@ class BusinessAccount extends Account {
     this.sepaPermission = sepaPermission;
   }
 
-  makeDeposit(amount) {
-    if (amount > 0) {
-      this.balance = this.balance + amount;
-    }
-  }
-
   makeWithdrawal(amount) {
     if (amount < this.balance + this.creditLimit && amount < 20000) {
       this.balance = this.balance - amount;
