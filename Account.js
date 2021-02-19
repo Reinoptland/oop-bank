@@ -5,6 +5,8 @@ class Account {
     this.balance = balance;
     this.creditLimit = creditLimit;
   }
+
+  makeDeposit() {}
 }
 
 module.exports = Account;

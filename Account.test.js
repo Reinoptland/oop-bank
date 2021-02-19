@@ -12,7 +12,7 @@ test("Account should be a constructor, (you can use it with the new keyword)", (
   expect(accountInstance instanceof Account).toBe(true);
 });
 
-test.only("A new Account can be created with and should store: a name, balance & creditLimit", () => {
+test("A new Account can be created with and should store: a name, balance & creditLimit", () => {
   const name = "Rein";
   const balance = 1000;
   const creditLimit = 500;
@@ -24,7 +24,7 @@ test.only("A new Account can be created with and should store: a name, balance &
   expect(accountInstance.creditLimit).toBe(500);
 });
 
-test("An account instance should have a 'makeDeposit' method", () => {
+test.only("An account instance should have a 'makeDeposit' method", () => {
   const accountInstance = new Account();
 
   expect(accountInstance.makeDeposit).toBeDefined();
