@@ -13,7 +13,7 @@ class Account {
   }
 
   makeWithdrawal(amount) {
-    if (amount < this.balance + this.creditLimit) {
+    if (amount < this.balance + this.creditLimit && amount < 5000) {
       this.balance = this.balance - amount;
     }
   }

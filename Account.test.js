@@ -62,7 +62,7 @@ test("A number passed to makeWithdrawal should be subtracted from the balance of
   expect(accountInstance.balance).toBe(900);
 });
 
-test.only("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
+test("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const accountInstance = new Account("Rein", balance, creditLimit);
@@ -73,7 +73,7 @@ test.only("A number passed to makeWithdrawal which is greater than the balance +
   expect(accountInstance.balance).toBe(1000);
 });
 
-test("The daily limit for a withdrawal should be 5000, amounts over 5000 should be ignored", () => {
+test.only("The daily limit for a withdrawal should be 5000, amounts over 5000 should be ignored", () => {
   const balance = 10000;
   const creditLimit = 500;
   const accountInstance = new Account("Rein", balance, creditLimit);
