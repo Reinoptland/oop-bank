@@ -1,6 +1,8 @@
-// Export your class here as module.exports = MyClass
-class BusinessAccount {
+const Account = require("./Account");
+
+class BusinessAccount extends Account {
   constructor(name, balance, creditLimit, sepaPermission) {
+    super();
     this.name = name;
     this.balance = balance;
     this.creditLimit = creditLimit;
