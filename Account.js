@@ -7,6 +7,10 @@ class Account {
     this.dailyLimit = 5000;
   }
 
+  maxWithdrawalAmount() {
+    return Math.min(this.balance + this.creditLimit, this.dailyLimit);
+  }
+
   makeDeposit(amount) {
     if (amount > 0) {
       this.balance = this.balance + amount;
@@ -14,7 +18,7 @@ class Account {
   }
 
   makeWithdrawal(amount) {
-    if (amount < this.balance + this.creditLimit && amount < this.dailyLimit) {
+    if (amount < this.maxWithdrawalAmount()) {
       this.balance = this.balance - amount;
     }
   }
