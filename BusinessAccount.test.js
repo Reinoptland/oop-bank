@@ -31,14 +31,14 @@ test("A new Business Account can be created with and should store: a name, balan
   expect(businessAccountInstance.sepaPermission).toBe(true);
 });
 
-test.only("A Business Account instance should have a 'makeDeposit' method", () => {
+test("A Business Account instance should have a 'makeDeposit' method", () => {
   const businessAccountInstance = new BusinessAccount();
 
   expect(businessAccountInstance.makeDeposit).toBeDefined();
   expect(businessAccountInstance.makeDeposit instanceof Function).toBe(true);
 });
 
-test("A number passed to makeDeposit should be added to the balance of the account", () => {
+test.only("A number passed to makeDeposit should be added to the balance of the account", () => {
   const businessAccountInstance = new BusinessAccount("ACME.CO", 1000, 500);
 
   businessAccountInstance.makeDeposit(100);

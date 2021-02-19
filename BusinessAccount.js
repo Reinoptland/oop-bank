@@ -7,7 +7,9 @@ class BusinessAccount {
     this.sepaPermission = sepaPermission;
   }
 
-  makeDeposit() {}
+  makeDeposit(amount) {
+    this.balance = this.balance + amount;
+  }
 }
 
 module.exports = BusinessAccount;
