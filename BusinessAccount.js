@@ -18,6 +18,8 @@ class BusinessAccount {
       this.balance = this.balance - amount;
     }
   }
+
+  sepaInvoice() {}
 }
 
 module.exports = BusinessAccount;
