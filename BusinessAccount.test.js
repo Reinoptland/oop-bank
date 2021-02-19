@@ -61,7 +61,7 @@ test("A Business Account instance should have a 'makeWithdrawal' method", () => 
   expect(businessAccountInstance.makeWithdrawal instanceof Function).toBe(true);
 });
 
-test.only("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
+test("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
   const balance = 50000;
   const creditLimit = 500;
   const businessAccountInstance = new BusinessAccount(
@@ -75,7 +75,7 @@ test.only("A number passed to makeWithdrawal should be subtracted from the balan
   expect(businessAccountInstance.balance).toBe(44000);
 });
 
-test("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
+test.only("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const businessAccountInstance = new BusinessAccount(
