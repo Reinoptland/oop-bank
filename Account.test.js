@@ -54,7 +54,7 @@ test("An account instance should have a 'makeWithdrawal' method", () => {
   expect(accountInstance.makeWithdrawal instanceof Function).toBe(true);
 });
 
-test.only("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
+test("A number passed to makeWithdrawal should be subtracted from the balance of the account", () => {
   const accountInstance = new Account("Rein", 1000, 500);
 
   accountInstance.makeWithdrawal(100);
@@ -62,7 +62,7 @@ test.only("A number passed to makeWithdrawal should be subtracted from the balan
   expect(accountInstance.balance).toBe(900);
 });
 
-test("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
+test.only("A number passed to makeWithdrawal which is greater than the balance + the creditLimit is ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const accountInstance = new Account("Rein", balance, creditLimit);
