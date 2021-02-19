@@ -11,6 +11,8 @@ class Account {
       this.balance = this.balance + amount;
     }
   }
+
+  makeWithdrawal() {}
 }
 
 module.exports = Account;

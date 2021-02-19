@@ -39,7 +39,7 @@ test("A number passed to makeDeposit should be added to the balance of the accou
   expect(accountInstance.balance).toBe(1100);
 });
 
-test.only("makeDeposit should ignore negative numbers", () => {
+test("makeDeposit should ignore negative numbers", () => {
   const accountInstance = new Account("Rein", 1000, 500);
 
   accountInstance.makeDeposit(-1000);
@@ -47,7 +47,7 @@ test.only("makeDeposit should ignore negative numbers", () => {
   expect(accountInstance.balance).toBe(1000);
 });
 
-test("An account instance should have a 'makeWithdrawal' method", () => {
+test.only("An account instance should have a 'makeWithdrawal' method", () => {
   const accountInstance = new Account();
 
   expect(accountInstance.makeWithdrawal).toBeDefined();
