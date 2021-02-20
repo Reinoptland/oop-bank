@@ -10,6 +10,18 @@
 
 - Reduce duplication between Account and BusinessAccount by making use of inheritance
 
+## Solutions
+
+Branch `solutions`
+
+#### [Account](https://github.githistory.xyz/Reinoptland/oop-bank/blob/solutions/Account.js)
+#### [BusinessAccount](https://github.githistory.xyz/Reinoptland/oop-bank/blob/solutions/BusinessAccount.js)
+
+Branch `bonus` (inheritance)
+
+#### [Account](https://github.githistory.xyz/Reinoptland/oop-bank/blob/bonus/Account.js)
+#### [BusinessAccount](https://github.githistory.xyz/Reinoptland/oop-bank/blob/bonus/BusinessAccount.js)
+
 ## Getting started
 
 ### git command line
